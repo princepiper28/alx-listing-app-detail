@@ -1,32 +1,14 @@
-// constants/index.ts
-
-export interface PropertyProps {
-  name: string;
-  address: {
-    state: string;
-    city: string;
-    country: string;
-  };
-  rating: number;
-  category: string[];
-  price: number;
-  offers: {
-    bed: string;
-    shower: string;
-    occupants: string;
-  };
-  image: string;
-  discount: string;
-}
+import { PropertyProps } from "@/interfaces/index";
 
 export const HERO_IMAGE = "/assets/images/hero.jpg";
-export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
+
+export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
     name: "Villa Ocean Breeze",
     address: {
       state: "Seminyak",
       city: "Bali",
-      country: "Indonesia"
+      country: "Indonesia",
     },
     rating: 4.89,
     category: ["Luxury Villa", "Pool", "Free Parking"],
@@ -34,17 +16,30 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
     offers: {
       bed: "3",
       shower: "3",
-      occupants: "4-6"
+      occupants: "4-6",
     },
     image: "https://example.com/image1.jpg",
-    discount: ""
+    discount: "",
+    images: [
+      "https://example.com/image1a.jpg",
+      "https://example.com/image1b.jpg"
+    ],
+    description: "A luxurious villa with ocean breeze and tropical vibes.",
+    reviews: [
+      {
+        name: "Alice",
+        avatar: "https://example.com/avatar1.jpg",
+        rating: 5,
+        comment: "An amazing stay, highly recommended!",
+      }
+    ],
   },
   {
     name: "Mountain Escape Chalet",
     address: {
       state: "Aspen",
       city: "Colorado",
-      country: "USA"
+      country: "USA",
     },
     rating: 4.70,
     category: ["Mountain View", "Fireplace", "Self Checkin"],
@@ -52,10 +47,23 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
     offers: {
       bed: "4",
       shower: "2",
-      occupants: "5-7"
+      occupants: "5-7",
     },
     image: "https://example.com/image2.jpg",
-    discount: "30"
+    discount: "30",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Cozy Desert Retreat",
@@ -73,7 +81,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-3"
     },
     image: "https://example.com/image3.jpg",
-    discount: ""
+    discount: "",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "City Lights Penthouse",
@@ -91,7 +112,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-4"
     },
     image: "https://example.com/image4.jpg",
-    discount: "15"
+    discount: "15",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Riverside Cabin",
@@ -109,7 +143,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-6"
     },
     image: "https://example.com/image5.jpg",
-    discount: "20"
+    discount: "20",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Modern Beachfront Villa",
@@ -127,7 +174,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "8-10"
     },
     image: "https://example.com/image6.jpg",
-    discount: ""
+    discount: "",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Lakeside Chalet",
@@ -145,7 +205,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-5"
     },
     image: "https://example.com/image7.jpg",
-    discount: "10"
+    discount: "10",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Tropical Garden Villa",
@@ -163,7 +236,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "5-6"
     },
     image: "https://example.com/image8.jpg",
-    discount: "25"
+    discount: "25",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Urban Loft",
@@ -181,7 +267,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-3"
     },
     image: "https://example.com/image9.jpg",
-    discount: ""
+    discount: "",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Secluded Forest Cabin",
@@ -199,7 +298,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "5-7"
     },
     image: "https://example.com/image10.jpg",
-    discount: "40"
+    discount: "40",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Cliffside Villa",
@@ -217,7 +329,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "6-8"
     },
     image: "https://example.com/image11.jpg",
-    discount: "50"
+    discount: "50",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Coastal Escape Villa",
@@ -235,7 +360,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-6"
     },
     image: "https://example.com/image12.jpg",
-    discount: ""
+    discount: "",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Historical Villa",
@@ -253,7 +391,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-4"
     },
     image: "https://example.com/image13.jpg",
-    discount: "35"
+    discount: "35",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Downtown Apartment",
@@ -271,7 +422,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2"
     },
     image: "https://example.com/image14.jpg",
-    discount: "20"
+    discount: "20",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Luxury Safari Lodge",
@@ -289,7 +453,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "6-8"
     },
     image: "https://example.com/image15.jpg",
-    discount: "20"
+    discount: "20",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Countryside Cottage",
@@ -307,7 +484,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-4"
     },
     image: "https://example.com/image16.jpg",
-    discount: "25"
+    discount: "25",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Riverfront Mansion",
@@ -325,7 +515,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "6-8"
     },
     image: "https://example.com/image17.jpg",
-    discount: "30"
+    discount: "30",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Ski Chalet",
@@ -343,7 +546,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-5"
     },
     image: "https://example.com/image18.jpg",
-    discount: ""
+    discount: "",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Island Paradise Villa",
@@ -361,7 +577,20 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "8-10"
     },
     image: "https://example.com/image19.jpg",
-    discount: "60"
+    discount: "60",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   },
   {
     name: "Clifftop Retreat",
@@ -379,6 +608,19 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-5"
     },
     image: "https://example.com/image20.jpg",
-    discount: "40"
+    discount: "40",
+    images: [
+      "https://example.com/image2a.jpg",
+      "https://example.com/image2b.jpg"
+    ],
+    description: "Cozy chalet nestled in the mountains with breathtaking views.",
+    reviews: [
+      {
+        name: "John",
+        avatar: "https://example.com/avatar2.jpg",
+        rating: 4,
+        comment: "Perfect winter getaway spot!",
+      }
+    ],
   }
 ];
